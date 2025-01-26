@@ -1,3 +1,4 @@
+/* Base styles for the comments page */
 .comments-page {
     display: flex;
     flex-direction: column;
@@ -9,10 +10,12 @@
     top: 50px;
 }
 
+/* Header styling */
 .comment-header {
     background-color: #fff;
 }
 
+/* Comment creation area */
 .comment-create {
     background-color: var(--el-color);
     width: 70%;
@@ -27,6 +30,7 @@
     margin-left: 60px;
 }
 
+/* Error message styling */
 .error-message {
     position: fixed;
     top: 0px;
@@ -51,6 +55,7 @@
     text-decoration: underline;
     font-weight: 600;
 }
+
 .error-message button {
     padding: 5px 10px;
     border: 0;
@@ -65,6 +70,7 @@
     transform: scale(1.05);
 }
 
+/* Animation for error message */
 @keyframes showError {
     0% {
         opacity: 0;
@@ -76,11 +82,13 @@
     }
 }
 
+/* Comment creation title */
 .comment-create h1 {
     font-size: 1.8rem;
     color: var(--primary-color);
 }
 
+/* Styling for input and textarea fields */
 .comment-create input,
 .comment-create textarea {
     background-color: var(--background-color);
@@ -94,22 +102,27 @@
     transition: border-color 0.3s ease, box-shadow 0.3s ease;
 }
 
-.comment-create input:hover .comment-create textarea:hover {
+/* Input/textarea hover effect */
+.comment-create input:hover,
+.comment-create textarea:hover {
     border-color: var(--text-color);
     box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
 }
 
+/* Input/textarea focus effect */
 .comment-create input:focus,
 .comment-create textarea:focus {
     border-color: var(--primary-color);
     box-shadow: 0 0 10px rgba(78, 137, 255, 0.5);
 }
 
+/* Textarea specific styles */
 .comment-create textarea {
     resize: none;
     height: 100px;
 }
 
+/* Publish button styling */
 .comment-create .publish-btn {
     background-color: var(--primary-color);
     color: #fff;
@@ -123,15 +136,81 @@
     margin: 0 auto;
 }
 
+/* Hover effect for publish button */
 .comment-create .publish-btn:hover {
     background-color: rgb(44, 87, 218);
     transform: scale(1.05);
 }
 
+/* Comment list styling */
 .comment-list {
     width: 100%;
     max-width: 600px;
     display: flex;
     flex-direction: column;
     gap: 20px;
+}
+
+/* Mobile styles */
+@media (max-width: 768px) {
+    /* Adjusting the comment creation area for smaller screens */
+    .comment-create {
+        width: 90%;
+        margin-left: 5%;
+        padding: 15px;
+    }
+
+    /* Smaller text size for comment creation area */
+    .comment-create h1 {
+        font-size: 1.5rem;
+    }
+
+    /* Adjusting the input and textarea for smaller screens */
+    .comment-create input,
+    .comment-create textarea {
+        font-size: 0.9rem;
+    }
+
+    /* Adjust the publish button for mobile */
+    .comment-create .publish-btn {
+        width: 40%;
+        font-size: 0.9rem;
+    }
+
+    /* Adjusting the layout of the comment list */
+    .comment-list {
+        width: 100%;
+        gap: 15px;
+    }
+}
+
+@media (max-width: 480px) {
+    /* Comment creation area adjustments */
+    .comment-create {
+        width: 100%;
+        margin-left: 0;
+        padding: 10px;
+    }
+
+    /* Further reducing font size for title */
+    .comment-create h1 {
+        font-size: 1.2rem;
+    }
+
+    /* Adjusting input and textarea font size */
+    .comment-create input,
+    .comment-create textarea {
+        font-size: 0.85rem;
+    }
+
+    /* Adjusting the publish button width and font size */
+    .comment-create .publish-btn {
+        width: 60%;
+        font-size: 0.85rem;
+    }
+
+    /* Reduce the gap between comment list items */
+    .comment-list {
+        gap: 10px;
+    }
 }

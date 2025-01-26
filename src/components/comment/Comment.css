@@ -1,3 +1,4 @@
+/* Styling for the published comment */
 .published-comment {
     background-color: var(--el-color);
     color: var(--text-color);
@@ -11,15 +12,16 @@
     align-items: flex-start;
     transition: background-color 0.2s ease;
     margin-left: 10%;
-    min-width: 0%;
     min-width: 700px;
     max-width: 90%;
 }
 
+/* Hover effect for published comment */
 .published-comment:hover {
     background-color: rgba(255, 255, 255, 0.03);
 }
 
+/* Avatar styling */
 .published-comment .avatar {
     width: 40px;
     height: 40px;
@@ -28,6 +30,7 @@
     flex-shrink: 0;
 }
 
+/* Content area of the published comment */
 .published-comment .content {
     display: flex;
     flex-direction: column;
@@ -39,6 +42,7 @@
     padding: 6px;
 }
 
+/* Header of the published comment (name and time) */
 .published-comment .header {
     display: flex;
     justify-content: space-between;
@@ -48,9 +52,6 @@
     border-radius: 6px;
     width: 90%;
     padding: 5px;
-
-    top: 0;
-    left: 0;
 }
 
 .published-comment .header .name {
@@ -63,6 +64,7 @@
     color: var(--unhover-color);
 }
 
+/* Text of the published comment */
 .published-comment .text {
     font-size: 0.9rem;
     line-height: 1.4;
@@ -71,6 +73,7 @@
     padding: 0;
 }
 
+/* Delete button styling */
 .published-comment .delete-btn {
     align-self: flex-end;
     background-color: transparent;
@@ -83,8 +86,88 @@
     transition: background-color 0.3s ease, color 0.3s ease, transform 0.2s ease;
 }
 
+/* Hover effect for delete button */
 .published-comment .delete-btn:hover {
     background-color: var(--primary-color);
     color: #fff;
     transform: scale(1.05);
+}
+
+/* Mobile and tablet styles */
+@media (max-width: 768px) {
+    /* Adjusting the published comment width and layout for smaller screens */
+    .published-comment {
+        margin-left: 5%;
+        min-width: 0;
+        width: 90%;
+        padding: 10px 15px;
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    /* Avatar size adjustment */
+    .published-comment .avatar {
+        width: 35px;
+        height: 35px;
+    }
+
+    /* Adjust header layout */
+    .published-comment .header {
+        width: 100%;
+        flex-direction: row;
+        justify-content: space-between;
+        font-size: 0.85rem;
+    }
+
+    .published-comment .header .name {
+        font-size: 0.9rem;
+    }
+
+    /* Comment text font size adjustment */
+    .published-comment .text {
+        font-size: 0.85rem;
+    }
+
+    /* Adjust delete button */
+    .published-comment .delete-btn {
+        font-size: 0.75rem;
+        padding: 5px 15px;
+        margin-top: 10px;
+    }
+}
+
+@media (max-width: 480px) {
+    /* Further adjustments for very small screens */
+    .published-comment {
+        margin-left: 0;
+        width: 100%;
+        padding: 8px 12px;
+        gap: 8px;
+    }
+
+    /* Avatar size for very small screens */
+    .published-comment .avatar {
+        width: 30px;
+        height: 30px;
+    }
+
+    /* Adjust header font size */
+    .published-comment .header {
+        font-size: 0.8rem;
+    }
+
+    .published-comment .header .name {
+        font-size: 0.85rem;
+    }
+
+    /* Comment text font size for mobile */
+    .published-comment .text {
+        font-size: 0.8rem;
+    }
+
+    /* Delete button font size */
+    .published-comment .delete-btn {
+        font-size: 0.7rem;
+        padding: 4px 12px;
+    }
 }

@@ -15,7 +15,7 @@
 }
 
 .intro button {
-    padding: 10px 20px;
+    padding: 12px 25px;
     border-radius: 12px;
     border: 2px solid transparent;
     outline: none;
@@ -37,6 +37,7 @@
     justify-content: center;
     flex-direction: column;
     align-items: center;
+    text-align: center;
 }
 
 .intro .background-info span {
@@ -50,55 +51,69 @@
 h1 {
     color: white;
 }
+
 .hot {
     position: absolute;
     top: 10%;
-    left: 3%;
+    left: -100px;
+    transform: translateX(-50%);
     background: linear-gradient(
         to top right,
         rgba(255, 87, 34, 1) 0%,
         rgba(251, 140, 0, 1) 100%
     );
     box-shadow: 1px 1px 30px rgba(255, 111, 0, 1);
+    width: 100px; /* Increased size of the hot effect */
+    height: 100px;
+    border-radius: 50%;
+    animation: spin 4s linear infinite;
 }
+
 .sun {
     position: absolute;
-    top: -10%;
-    left: 65%;
-    width: 50px;
-    height: 50px;
+    top: -20%;
+    left: 50%;
+    width: 120px; /* Increased the sun size */
+    height: 120px;
     border-radius: 100%;
     background: linear-gradient(
         to bottom left,
         rgba(255, 235, 59, 1) 0%,
         rgba(249, 168, 37, 1) 90%
     );
-    box-shadow: 1px 1px 30px rgba(255, 160, 0, 1);
-    animation: inex 3s infinite linear, fadeIn 2s infinite ease;
+    box-shadow: 1px 1px 50px rgba(255, 160, 0, 1);
+    animation: sunPulse 4s infinite ease-in-out, fadeIn 2s infinite ease;
 }
 
 .sunx {
     position: absolute;
-    top: 30%;
-    left: 45%;
-    width: 10px;
-    height: 10px;
+    top: 40%;
+    left: 50%;
+    width: 15px;
+    height: 15px;
     border-radius: 100%;
     background-color: #fff;
     opacity: 0.2;
 }
 
-@keyframes inex {
-    50% {
-        opacity: 0.4;
+@keyframes sunPulse {
+    0%,
+    100% {
+        transform: scale(1);
+        opacity: 0.8;
     }
-    60% {
+    50% {
+        transform: scale(1.1);
         opacity: 1;
     }
 }
-@keyframes move {
-    50% {
-        transform: translateX(-10px);
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
     }
 }
 
@@ -107,7 +122,6 @@ h1 {
         opacity: 0;
         transform: scale(0.99);
     }
-
     100% {
         opacity: 1;
         transform: scale(1);
@@ -125,5 +139,74 @@ h1 {
         text-shadow: 0 0 8px rgb(255, 227, 50), 0 0 15px rgb(255, 187, 0),
             0 0 25px rgb(255, 140, 0);
         transform: scale(1.05);
+    }
+}
+
+/* Mobile responsiveness */
+@media (max-width: 768px) {
+    .intro {
+        width: 85%;
+        margin-left: 7.5%;
+        margin-top: 50px;
+        padding: 15px;
+    }
+
+    .intro button {
+        padding: 8px 16px;
+        font-size: 16px;
+    }
+
+    .intro .background-info {
+        padding: 0 10px;
+    }
+
+    .intro .background-info h1 {
+        font-size: 24px;
+    }
+
+    .intro .background-info p {
+        font-size: 14px;
+    }
+
+    .hot {
+        width: 120px;
+        height: 120px;
+        top: 5%;
+    }
+
+    .sun {
+        width: 100px;
+        height: 100px;
+        top: -15%;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    .sunx {
+        width: 12px;
+        height: 12px;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+}
+
+@media (max-width: 480px) {
+    .intro {
+        width: 95%;
+        margin-left: 2.5%;
+        padding: 10px;
+    }
+
+    .intro button {
+        padding: 6px 12px;
+        font-size: 14px;
+    }
+
+    .intro .background-info h1 {
+        font-size: 20px;
+    }
+
+    .intro .background-info p {
+        font-size: 12px;
     }
 }

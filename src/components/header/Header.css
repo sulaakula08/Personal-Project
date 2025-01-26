@@ -1,3 +1,4 @@
+/* Base styles for the header */
 .header {
     color: var(--text-color);
     display: flex;
@@ -14,6 +15,7 @@
     float: left;
 }
 
+/* Navbar list styles */
 .header ul {
     display: flex;
     list-style: none;
@@ -21,6 +23,7 @@
     margin-right: 120px;
 }
 
+/* Logo styling */
 .header .logo {
     margin-left: 25px;
     position: relative;
@@ -35,6 +38,7 @@
     cursor: pointer;
 }
 
+/* Navbar list item styles */
 .header ul li {
     font-size: 23px;
     color: var(--unhover-color);
@@ -64,4 +68,57 @@
 
 .header ul li:hover {
     color: var(--text-color);
+}
+
+/* Mobile styles */
+@media (max-width: 768px) {
+    /* Adjust the header layout to be column-based on smaller screens */
+    .header {
+        width: 90%;
+        flex-direction: column;
+        margin-left: 5%;
+        padding: 10px 0;
+    }
+
+    .header ul {
+        flex-direction: column;
+        align-items: center;
+        gap: 10px; /* Reduced gap to make links closer together */
+        margin-right: 0;
+    }
+
+    /* Reduce font size for smaller screens */
+    .header ul li {
+        font-size: 18px;
+        padding: 8px 0; /* Add padding for better spacing */
+    }
+
+    /* Adjust logo size and position for mobile */
+    .header .logo {
+        margin-left: 0;
+        margin-bottom: 10px;
+        text-align: center;
+    }
+
+    /* Reduce the gap between navbar items for mobile */
+    .header ul {
+        gap: 10px;
+    }
+}
+
+@media (max-width: 480px) {
+    .header ul li {
+        font-size: 16px; /* Even smaller font size for smaller devices */
+        padding: 6px 0; /* Smaller padding for more compact links */
+    }
+
+    .header {
+        width: 100%;
+        margin-left: 0;
+        padding: 10px 0;
+    }
+
+    .header ul {
+        gap: 8px; /* Even smaller gap between items */
+    }
 }

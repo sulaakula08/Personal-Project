@@ -1,0 +1,67 @@
+.header {
+    color: var(--text-color);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    background: var(--el-color);
+    width: 73%;
+    border-radius: 22px;
+    margin-left: 1%;
+    max-height: 100%;
+    top: 10px;
+    z-index: 1000;
+    float: left;
+}
+
+.header ul {
+    display: flex;
+    list-style: none;
+    gap: 90px;
+    margin-right: 120px;
+}
+
+.header .logo {
+    margin-left: 25px;
+    position: relative;
+    top: -10px;
+}
+
+.header a {
+    text-decoration: none;
+}
+
+.header .logo h1 {
+    cursor: pointer;
+}
+
+.header ul li {
+    font-size: 23px;
+    color: var(--unhover-color);
+    cursor: pointer;
+    transition: all 300ms ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.header ul li::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    transform: translateX(-50%);
+    width: 0;
+    border: 0px solid white;
+    transition: all 0.4s ease;
+}
+
+.header ul li:hover::after {
+    width: 100%;
+    transform: translateX(0);
+    left: 0;
+    border: 1px solid white;
+}
+
+.header ul li:hover {
+    color: var(--text-color);
+}

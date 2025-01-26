@@ -1,0 +1,90 @@
+.published-comment {
+    background-color: var(--el-color);
+    color: var(--text-color);
+    border-radius: 8px;
+    padding: 8px 16px;
+    margin: 8px 0;
+    display: flex;
+    flex-direction: row;
+    gap: 12px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    align-items: flex-start;
+    transition: background-color 0.2s ease;
+    margin-left: 10%;
+    min-width: 0%;
+    min-width: 700px;
+    max-width: 90%;
+}
+
+.published-comment:hover {
+    background-color: rgba(255, 255, 255, 0.03);
+}
+
+.published-comment .avatar {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: var(--primary-color);
+    flex-shrink: 0;
+}
+
+.published-comment .content {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    flex-grow: 1;
+    word-wrap: break-word;
+    overflow-y: hidden;
+    overflow-x: hidden;
+    padding: 6px;
+}
+
+.published-comment .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 0.9rem;
+    color: var(--text-color);
+    border-radius: 6px;
+    width: 90%;
+    padding: 5px;
+
+    top: 0;
+    left: 0;
+}
+
+.published-comment .header .name {
+    color: var(--primary-color);
+    font-weight: bold;
+}
+
+.published-comment .header .time {
+    font-size: 0.8rem;
+    color: var(--unhover-color);
+}
+
+.published-comment .text {
+    font-size: 0.9rem;
+    line-height: 1.4;
+    color: var(--text-color);
+    margin: 0;
+    padding: 0;
+}
+
+.published-comment .delete-btn {
+    align-self: flex-end;
+    background-color: transparent;
+    color: var(--primary-color);
+    border: 1px solid var(--primary-color);
+    padding: 6px 18px;
+    font-size: 0.8rem;
+    border-radius: 15px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease, transform 0.2s ease;
+}
+
+.published-comment .delete-btn:hover {
+    background-color: var(--primary-color);
+    color: #fff;
+    transform: scale(1.05);
+}

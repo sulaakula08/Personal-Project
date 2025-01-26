@@ -1,0 +1,5 @@
+.home {
+    background: var(--background-color);
+    height: 1500px;
+    padding-top: 10px;
+}

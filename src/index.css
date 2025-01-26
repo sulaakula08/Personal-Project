@@ -1,0 +1,17 @@
+* {
+    font-family: "Poppins", sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --el-color: rgb(32, 43, 59);
+    --text-color: #dde0e4ff;
+    --background-color: rgb(11, 19, 30);
+    --unhover-color: rgb(181, 182, 184);
+    --primary-color: #4e89ff;
+    --secondary-color: #7f8c8d;
+    --border-radius: 10px;
+    --box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.3);
+}

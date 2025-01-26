@@ -1,0 +1,137 @@
+.comments-page {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    background-color: var(--background-color);
+    width: 100%;
+    position: relative;
+    height: 1000px;
+    top: 50px;
+}
+
+.comment-header {
+    background-color: #fff;
+}
+
+.comment-create {
+    background-color: var(--el-color);
+    width: 70%;
+    max-width: 900px;
+    border-radius: var(--border-radius);
+    box-shadow: var(--box-shadow);
+    padding: 20px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-left: 60px;
+}
+
+.error-message {
+    position: fixed;
+    top: 0px;
+    left: 30%;
+    z-index: 1001;
+    background-color: rgba(212, 4, 4, 0.9);
+    display: flex;
+    align-items: center;
+    padding: 5px;
+    gap: 8px;
+    border-radius: 15px;
+    color: white;
+    animation: showError 0.3s ease-out;
+    height: 70px;
+}
+
+.error-message svg {
+    width: 60px;
+}
+
+.error-message span {
+    text-decoration: underline;
+    font-weight: 600;
+}
+.error-message button {
+    padding: 5px 10px;
+    border: 0;
+    outline: 0;
+    cursor: pointer;
+    background-color: transparent;
+    color: white;
+    transition: all 200ms ease;
+}
+
+.error-message button:hover {
+    transform: scale(1.05);
+}
+
+@keyframes showError {
+    0% {
+        opacity: 0;
+        transform: translateX(0) translateY(-20%);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0) translateY(0);
+    }
+}
+
+.comment-create h1 {
+    font-size: 1.8rem;
+    color: var(--primary-color);
+}
+
+.comment-create input,
+.comment-create textarea {
+    background-color: var(--background-color);
+    color: var(--text-color);
+    border: 1px solid var(--unhover-color);
+    border-radius: var(--border-radius);
+    padding: 10px;
+    font-size: 1rem;
+    width: 100%;
+    outline: none;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.comment-create input:hover .comment-create textarea:hover {
+    border-color: var(--text-color);
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+}
+
+.comment-create input:focus,
+.comment-create textarea:focus {
+    border-color: var(--primary-color);
+    box-shadow: 0 0 10px rgba(78, 137, 255, 0.5);
+}
+
+.comment-create textarea {
+    resize: none;
+    height: 100px;
+}
+
+.comment-create .publish-btn {
+    background-color: var(--primary-color);
+    color: #fff;
+    border: none;
+    padding: 10px;
+    font-size: 1rem;
+    border-radius: var(--border-radius);
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    width: 20%;
+    margin: 0 auto;
+}
+
+.comment-create .publish-btn:hover {
+    background-color: rgb(44, 87, 218);
+    transform: scale(1.05);
+}
+
+.comment-list {
+    width: 100%;
+    max-width: 600px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
